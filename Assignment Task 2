@@ -1,0 +1,94 @@
+#include <iostream>
+#include<iomanip>
+using namespace std;
+int main () {
+    
+    int English;
+    int Math;
+    int Spanish;
+    int History;
+    int ComputerScience;
+    
+    string GRADE;
+    string Result;
+    
+    cout<<"Enter marks for English" ;
+    cin>>English;
+    
+    cout<<"Enter marks for Math" ;
+    cin>>Math;
+    
+    cout<<"Enter marks for Spanish" ;
+    cin>>Spanish;
+    
+    cout<<"Enter marks for History" ;
+    cin>>History;
+    
+    cout<<"Enter marks for Computer Science" ;
+    cin>>ComputerScience;
+    
+    int totalmark = English + Math + Spanish + History + ComputerScience;
+    cout<<"Total Marks is =" <<totalmark<<endl;
+    
+    float percentage = (totalmark/500.0)*100;
+    cout<<fixed<<setprecision(2);
+    cout<<"Percentage is: "<<percentage<<endl;
+    
+    if (percentage >= 90) {
+        GRADE ="Grade A+";
+        cout<<"Grade is A+"<<endl;
+    }
+    else if (percentage >= 80 && percentage < 90) {
+        GRADE ="Grade A";
+        cout<<"Grade is A"<<endl;
+    }
+    else if (percentage >= 70 && percentage < 80) {
+        GRADE ="Grade B";
+        cout<<"Grade is B"<<endl;
+    }
+    else if (percentage >= 60 && percentage < 70) {
+        GRADE ="Grade C";
+        cout<<"Grade is C"<<endl;
+    }
+    else if (percentage >= 50 && percentage < 60) {
+        GRADE ="Grade D";
+        cout<<"Grade is D"<<endl;
+    }
+    else {
+        GRADE ="F";
+        cout<<"Grade is F"<<endl;
+    }
+    
+    // Show report card
+    
+    cout<<"------------------------------------------------"<<endl;
+    cout<<"---------------Final Result----------------------"<<endl;
+    cout<<"------------------------------------------------"<<endl;
+    
+    cout<<left<<setw(15)<<"subject"<<setw(10)<<"Marks"<<endl;
+    cout<<"-----------------------------------------------"<<endl;
+
+cout<<left<<setw(20)<<"English"<<English<<endl;
+
+cout<<left<<setw(20)<<"Math"<<Math<<endl;
+
+cout<<left<<setw(20)<<"Spanish"<<Spanish<<endl;
+
+cout<<left<<setw(20)<<"History"<<History<<endl;
+
+cout<<left<<setw(20)<<"ComputerScience"<<ComputerScience<<endl;
+
+cout<<"-------------------------------------------"<<endl;
+
+cout<<left<<setw(20)<<"Total Mark"<<totalmark<<endl;
+
+cout<<left<<setw(20)<<"Percentage"<<percentage<<endl;
+
+cout<<left<<setw(20)<<"GRADE"<<GRADE<<endl;
+
+cout<<"-------------------------------------------"<<endl;
+
+cout << left << setw(20) << "Result" << ((percentage >= 50) ? "Pass" : "Fail") << endl;
+
+return 0;
+}
